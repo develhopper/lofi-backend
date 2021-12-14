@@ -2,3 +2,5 @@
 vendor/*
 storage/*
 !storage/migrations/*
+node_modules/
+public/dist

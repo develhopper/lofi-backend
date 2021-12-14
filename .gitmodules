@@ -1,0 +1,3 @@
+[submodule "lofi-frontend"]
+	path = lofi-frontend
+	url = git@github.com:develhopper/lofi-frontend.git

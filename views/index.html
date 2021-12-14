@@ -1,76 +1,21 @@
-@extends('partials/base.html')
+<!DOCTYPE html>
+<html lang="">
 
-@section('container')
-<div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h1 class="text-center text-info">
-            Young Framework
-        </h1>
-        <p class="lead text-left">
-            Young framework is a php mvc web application framework
-        </p>
-        <h2>
-            Features
-        </h2>
-        <ol>
-            <li>
-                Easy to use and flexile
-            </li>
-            <li>
-                Simple Routing system
-            </li>
-            <li>
-                Built in template engine named Primal
-            </li>
-            <li>
-                Build in ORM and query builder library
-            </li>
-            <li>
-                Middlewares
-            </li>
-            <li>
-                Lightweight and fast
-            </li>
-        </ol>
-        <h2>
-            Installation
-        </h2>
-        <p class="h4">Execute below commands</p> 
-        <code>composer create-project develhopper/young</code>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="/favicon.ico">
+    <title>lofi-vue</title>
+    <link href="/dist/css/index.css" rel="preload" as="style">
+    <link href="/dist/js/main.js" rel="preload" as="script">
+    <link href="/dist/css/index.css" rel="stylesheet">
+</head>
 
-        <p class="h4">Initialize project directories</p>
+<body><noscript><strong>We're sorry but lofi-vue doesn't work properly without JavaScript enabled. Please enable it to
+            continue.</strong></noscript>
+    <div id="app"></div>
+    <script src="dist/js/main.js"></script>
+</body>
 
-        <code>php young init</code>
-
-        <p class="h4">Run default migrations: for user authentication</p>
-        <code>php young migrate create_users_table</code>
-
-        <p class="h3">Apache configuration</p>
-        <p>set root directory to public directory</p>
-        <p>example apache config:</p>
-        <code>
-<pre>
-    &lt;VirtualHost *:80&gt;
-        ServerName lofi.lc
-        ServerAlias *.lofi.lc
-        DocumentRoot /var/www/localhost/htdocs/young/public
-        &lt;Directory /var/www/localhost/htdocs/young/public&gt;
-            Options FollowSymLinks
-            AllowOverride All
-            DirectoryIndex index.php
-            Require all granted
-            Header set Access-Control-Allow-Origin &quot;*&quot;
-        &lt;/Directory&gt;
-    &lt;/VirtualHost&gt;
-</pre>
-        </code>
-        <h2>
-            Documentation
-        </h2>
-        <p>
-            Read the documentation
-        </p> <a class="btn btn-primary" href="#">Documentation</a>
-        <hr>
-    </div>
-</div>
-@endsection
+</html>
