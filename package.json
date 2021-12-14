@@ -4,6 +4,7 @@
   "description": "Young framework is a php mvc web application framework",
   "main": "index.js",
   "scripts": {
+    "dev": "NODE_ENV=dev mix watch --hot",
     "build": "mix --production"
   },
   "author": "",

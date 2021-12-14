@@ -26,7 +26,7 @@ return [
         "nodes" =>[]
     ],
     "global_function_files" => [
-
+        __DIR__.'/utils/functions.php'
     ],
     "storage" => [
         "public" => realpath(__DIR__."/../public/"),

@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="/favicon.ico">
     <title>lofi-vue</title>
-    <link href="/dist/css/index.css" rel="preload" as="style">
-    <link href="/dist/js/main.js" rel="preload" as="script">
-    <link href="/dist/css/index.css" rel="stylesheet">
+    <link href="{{mix('/css/index.css')}}" rel="preload" as="style">
+    <link href="{{mix('/js/main.js')}}" rel="preload" as="script">
+    <link href="{{mix('/css/index.css')}}" rel="stylesheet">
 </head>
 
 <body><noscript><strong>We're sorry but lofi-vue doesn't work properly without JavaScript enabled. Please enable it to
             continue.</strong></noscript>
     <div id="app"></div>
-    <script src="dist/js/main.js"></script>
+    <script src="{{mix('/js/main.js')}}"></script>
 </body>
 
 </html>

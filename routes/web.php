@@ -13,4 +13,4 @@ Route::post("login","HomeController@login");
 Route::post("logout", "HomeController@logout");
 
 // redirect all invalid routes to index
-Route::get(".*","HomeController@redirect");
+Route::get("(?!api/).*","HomeController@index");
