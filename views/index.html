@@ -1,0 +1,76 @@
+@extends('partials/base.html')
+
+@section('container')
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="text-center text-info">
+            Young Framework
+        </h1>
+        <p class="lead text-left">
+            Young framework is a php mvc web application framework
+        </p>
+        <h2>
+            Features
+        </h2>
+        <ol>
+            <li>
+                Easy to use and flexile
+            </li>
+            <li>
+                Simple Routing system
+            </li>
+            <li>
+                Built in template engine named Primal
+            </li>
+            <li>
+                Build in ORM and query builder library
+            </li>
+            <li>
+                Middlewares
+            </li>
+            <li>
+                Lightweight and fast
+            </li>
+        </ol>
+        <h2>
+            Installation
+        </h2>
+        <p class="h4">Execute below commands</p> 
+        <code>composer create-project develhopper/young</code>
+
+        <p class="h4">Initialize project directories</p>
+
+        <code>php young init</code>
+
+        <p class="h4">Run default migrations: for user authentication</p>
+        <code>php young migrate create_users_table</code>
+
+        <p class="h3">Apache configuration</p>
+        <p>set root directory to public directory</p>
+        <p>example apache config:</p>
+        <code>
+<pre>
+    &lt;VirtualHost *:80&gt;
+        ServerName lofi.lc
+        ServerAlias *.lofi.lc
+        DocumentRoot /var/www/localhost/htdocs/young/public
+        &lt;Directory /var/www/localhost/htdocs/young/public&gt;
+            Options FollowSymLinks
+            AllowOverride All
+            DirectoryIndex index.php
+            Require all granted
+            Header set Access-Control-Allow-Origin &quot;*&quot;
+        &lt;/Directory&gt;
+    &lt;/VirtualHost&gt;
+</pre>
+        </code>
+        <h2>
+            Documentation
+        </h2>
+        <p>
+            Read the documentation
+        </p> <a class="btn btn-primary" href="#">Documentation</a>
+        <hr>
+    </div>
+</div>
+@endsection

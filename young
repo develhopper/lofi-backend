@@ -1,0 +1,45 @@
+<?php
+
+use Denver\Env;
+
+include __DIR__."/vendor/autoload.php";
+
+Env::setup(__DIR__."/.env");
+
+function help(){
+    echo "\tYoung cli tool\r\n\r\n";
+    echo "Available commands:\r\n";
+    echo "1.init\t - Init the application\r\n";
+    echo "2.migrate {migration_name}\t - run migrations\r\n";
+}
+
+function init(){
+    mkdir(__DIR__."/storage/cache",0777,true);
+}
+
+function migrate($migration){
+    if(!$migration)
+        return help();
+    $file = __DIR__."/storage/migrations/".$migration[0].".php";
+    if(!file_exists($file)){
+        echo "Migration file not exists\r\n$file\r\n";
+        return;
+    }
+    echo "running migration $migration[0] \r\n";
+
+    // exec("php $file",$output);
+    // echo $output."\r\n";
+    include $file;
+
+    echo "\r\n\tDone\r\n";
+}
+
+if(count($argv) == 1){
+    help();
+}else if(isset($argv[1])){
+    if(function_exists($argv[1])){
+        call_user_func($argv[1],array_slice($argv,2));
+    }else{
+        help();
+    }
+}

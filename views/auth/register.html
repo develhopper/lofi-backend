@@ -1,0 +1,31 @@
+@extends('partials/base.html')
+
+@section('container')
+<h2 class="text-center">
+    Register
+</h2> <a href="/login" class="text-center">or login</a>
+@if(session()->has('errors'))
+    @foreach(session()->flash('errors') as $error)
+        <div class="alert alert-danger">{{$error}}</div>
+    @endforeach
+@endif
+
+@if(session()->has('success'))
+     <div class="alert alert-success">{{session()->flash("success")}}</div>
+@endif
+<form role="form" method="POST">
+     {{csrf_field()}}
+    <div class="form-group">
+         <label for="username">Username</label>
+         <input name="username" type="text" class="form-control" id="username" placeholder="Enter username" />
+    </div>
+    <div class="form-group">
+         <label for="email">Email address</label>
+         <input name="email" type="email" class="form-control" id="email" placeholder="Enter email" />
+    </div>
+    <div class="form-group">
+         <label for="password">Password</label>
+         <input name="password" type="password" class="form-control" placeholder="Password" />
+    </div> <button type="submit" class="btn btn-default">Submit</button>
+</form>
+@endsection
