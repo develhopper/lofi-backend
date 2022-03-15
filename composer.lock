@@ -162,16 +162,16 @@
         },
         {
             "name": "develhopper/young-framework",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/develhopper/young-framework.git",
-                "reference": "29c6c3bf4cd71128c3489930f77858d862967cdb"
+                "reference": "da39abc7e21a5846473a76bdb2740481118bbd0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/develhopper/young-framework/zipball/29c6c3bf4cd71128c3489930f77858d862967cdb",
-                "reference": "29c6c3bf4cd71128c3489930f77858d862967cdb",
+                "url": "https://api.github.com/repos/develhopper/young-framework/zipball/da39abc7e21a5846473a76bdb2740481118bbd0a",
+                "reference": "da39abc7e21a5846473a76bdb2740481118bbd0a",
                 "shasum": ""
             },
             "require": {
@@ -199,9 +199,9 @@
             "description": "Young PHP MVC framework",
             "support": {
                 "issues": "https://github.com/develhopper/young-framework/issues",
-                "source": "https://github.com/develhopper/young-framework/tree/1.1.2"
+                "source": "https://github.com/develhopper/young-framework/tree/1.1.3"
             },
-            "time": "2021-12-14T13:55:41+00:00"
+            "time": "2022-01-18T14:12:30+00:00"
         }
     ],
     "packages-dev": [],
@@ -212,5 +212,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.2.0"
 }

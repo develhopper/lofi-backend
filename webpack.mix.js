@@ -1,7 +1,7 @@
 const mix = require('laravel-mix');
 const path = require('path/posix');
 const del = require('del');
-if(process.env.NODE_ENV !="dev")
+if(process.env.NODE_ENV !="development")
     del('public/dist/hot');
 mix.js('lofi-frontend/src/main.js', 'js').vue({ version: 3, publicPath: "/dist/" });
 mix.postCss('lofi-frontend/src/index.css', 'css');
